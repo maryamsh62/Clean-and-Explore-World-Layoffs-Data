@@ -37,7 +37,7 @@ The final Tableau dashboard summarizes the answers to these questions.
 
 
   
-##  Cleaning Data 
+##  Data Cleaning Process 
 
 - The script creates a clean, analysis-ready table, layoffs_2, from the raw layoff data.
 - It first selects only relevant columns (via layoffs_1) and removes unused/blank ones.
@@ -46,7 +46,7 @@ The final Tableau dashboard summarizes the answers to these questions.
 - Rows with no layoff information and empty key fields are dropped, leaving layoffs_2 ready for all EDA queries and the Tableau dashboard.
 
 
-## Exploratory Data Analysis 
+## Exploratory Data Analysis (EDA)
 
 This script uses the cleaned layoffs_2 table to perform core exploratory analysis on global layoffs. It runs basic quality checks on maximum layoffs and validates that percentage_laid_off stays within the [0, 1] range. It confirms time coverage (2020–2023) and identifies 100% layoff events, ranking them by total layoffs and funds raised. It then aggregates layoffs by company, industry, country, year, and funding stage to power the “Top 10” and stage views in the dashboard. The script also computes monthly totals and rolling cumulative layoffs, which drive the monthly trend line chart. Finally, it ranks companies by total layoffs per year and returns the top five, used in the “Top 5 Companies by Layoffs — Yearly View.
 
